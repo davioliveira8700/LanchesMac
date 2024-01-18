@@ -12,14 +12,14 @@ namespace LanchesMac.Migrations
                 name: "Categorias",
                 columns: table => new
                 {
-                    CategotiaId = table.Column<int>(type: "int", nullable: false)
+                    CategoriaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoriaNome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     CategoriaDescricao = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categorias", x => x.CategotiaId);
+                    table.PrimaryKey("PK_Categorias", x => x.CategoriaId);
                 });
 
             migrationBuilder.CreateTable(
@@ -45,7 +45,7 @@ namespace LanchesMac.Migrations
                         name: "FK_Lanches_Categorias_CategoriaId",
                         column: x => x.CategoriaId,
                         principalTable: "Categorias",
-                        principalColumn: "CategotiaId",
+                        principalColumn: "CategoriaId",
                         onDelete: ReferentialAction.Cascade);
                 });
 

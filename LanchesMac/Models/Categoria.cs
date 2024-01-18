@@ -7,7 +7,7 @@ namespace LanchesMac.Models
     public class Categoria
     {
         [Key]
-        public int CategotiaId { get; set; }
+        public int CategoriaId { get; set; }
         [StringLength(100,ErrorMessage ="O tamanho maximo é 100 caracteres")]
         [Required(ErrorMessage ="Informe o nome da categoria")]
         [Display(Name ="Nome")]
